@@ -1,11 +1,11 @@
-
 import './App.css';
+import MainPage from './scenes/MainPage/MainPage';
 
 function App() {
   return (
     <div className="App">
       <div>
-        <h1>HELLO Kashish</h1>
+        <MainPage />
       </div>
     </div>
   );
