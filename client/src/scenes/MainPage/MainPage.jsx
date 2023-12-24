@@ -1,6 +1,7 @@
 import React from 'react'
 import { Navbar } from '../navbar/Navbar'
 import './mainPage.css'
+import MyDropzone from '../MyDropzone/MyDropzone'
 
 const MainPage = () => {
   return (
@@ -8,8 +9,8 @@ const MainPage = () => {
     <div>
       <Navbar />
     </div>
-    <div>
-      <h1>hi</h1>
+    <div className='dropzone'>
+      <MyDropzone />
     </div>
     </div>
   )
