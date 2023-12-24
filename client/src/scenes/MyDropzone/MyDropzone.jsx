@@ -1,5 +1,6 @@
-import React, {useMemo} from 'react';
+import React, {useMemo, useCallback} from 'react';
 import { useDropzone } from 'react-dropzone';
+import axios from 'axios';
 
 const baseStyle = {
   flex: 1,
@@ -33,12 +34,33 @@ const rejectStyle = {
 };
 
 const MyDropzone = () => {
+  const onDrop = useCallback(async (acceptedFiles) => {
+    const file = acceptedFiles[0];
+
+    // Create a FormData object to append the file
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const response = await axios.post('YOUR_BACKEND_API_ENDPOINT', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+
+      console.log('File uploaded successfully:', response.data);
+    } catch (error) {
+      console.error('Error uploading file:', error.message);
+    }
+  }, []);
+
   const { acceptedFiles, getRootProps, getInputProps,isFocused,
     isDragAccept,
     isDragReject } = useDropzone({
     acceptedFiles: '.jpg, .jpeg, .png',
     multiple: false,
-    maxSize: 2 * 1024 * 1024, // 2MB in bytes
+    maxSize: 2 * 1024 * 1024, 
+    onDrop
   });
   const style = useMemo(() => ({
     ...baseStyle,
