@@ -8,6 +8,7 @@
   background-size: 400%;
   background-attachment: fixed;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  overflow-y: scroll;
 }
 @keyframes gradientAnimation{
   0% {
@@ -23,6 +24,21 @@
 }
 
 .dropzone{
-  height: 400px;
+  height: 300px;
   width: 100%
+}
+.aboutSite{
+  text-align: left;
+  width: 100%;
+}
+
+.Title{
+  margin-left: 30px;
+  margin-bottom: 10px;
+  color: #f1cd92;
+}
+.contentMain{
+  margin-left: 30px;
+  color: #f1e8dd;
+  
 }

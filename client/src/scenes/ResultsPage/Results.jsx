@@ -3,13 +3,14 @@ import axios from 'axios';
 import { Navbar } from '../navbar/Navbar'
 import "./results.css"
 import DisplayCard from '../../components/DisplayCard';
+import { Typography } from '@mui/material';
 const Results = () => {
   const [results, setResults] = useState([]);
 
   const fetchResults= async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/list_processes');
-     
+      const response = await axios.get('https://6bbb-122-172-82-83.ngrok-free.app/list_data');
+      console.log(response.data);
       setResults(response.data);
     } catch (error) {
       console.error('Error fetching processes:', error);
@@ -18,11 +19,11 @@ const Results = () => {
 
   useEffect(() => {
     fetchResults();
-  }, [results]);
+  }, []);
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://127.0.0.1:5000/delete/${id}`);
+      await axios.delete(`https://6bbb-122-172-82-83.ngrok-free.app/delete/data/${id}`);
       
       setResults(prevResults => prevResults.filter(result => result.id !== id));
       
@@ -38,12 +39,14 @@ const Results = () => {
         <Navbar />
       </div>
       <div>
-        <h2>Fetched Results:</h2>
-        <ul>
+      <Typography variant="h3" component="h3" style={{ paddingBottom: '30px',paddingTop: '30px' }}>
+      Fetched results
+    </Typography>
+      </div>
+      <div className='cardContainerCourse'>
           {results.map((result) => {
             return <DisplayCard key={result.id} result={result} onDelete={handleDelete} />
           })}
-        </ul>
       </div>
     </div>
   )

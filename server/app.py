@@ -4,8 +4,11 @@ import ThaiPersonalCardExtract as card
 from datetime import datetime
 from database import Database
 from flask_mysqldb import MySQL
+# pylint: disable=E0401
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # MySQL database configuration
 app.config['MYSQL_HOST'] = 'sql12.freemysqlhosting.net'

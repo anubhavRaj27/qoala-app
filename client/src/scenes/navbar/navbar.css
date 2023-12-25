@@ -16,15 +16,13 @@
   font-size:x-large;
   color: white;
   letter-spacing: 1.5px;
-  padding-left: 850px;
+  margin-right: 20%;
 }
 .content-outer{
   display: flex;
   justify-content: flex-end;
-  width:100%;
-}
-.results{
-  margin-right: 40px;
+  width:50%;
+  padding-left: 30%;
 }
 .contents{
   display: flex;
@@ -33,6 +31,6 @@
  font-weight:500;
  font-family:'Segoe UI';
   font-style: bold;
-  font-size:30px;
+  font-size:x-large;
   color:black;
 }

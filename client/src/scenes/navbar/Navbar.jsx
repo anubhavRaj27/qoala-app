@@ -10,7 +10,7 @@ export const Navbar = () => {
     </Link>
     <div className="content-outer">
       <div className='contents'>
-        <Link to="/results" style={{ textDecoration: 'none',color: '#0F0F0F',fontFamily: 'Segoe UI', fontStyle: 'bold', fontSize: 'large' }}>
+        <Link to="/results" style={{ textDecoration: 'none',color: '#0F0F0F',fontFamily: 'Segoe UI', fontStyle: 'bold', fontSize: 'x-large' }}>
           <div className="results">Results<br/></div>
         </Link>
       </div>
