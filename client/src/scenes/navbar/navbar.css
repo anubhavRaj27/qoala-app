@@ -11,10 +11,28 @@
   height: 35px;
   position: relative;
   line-height: 50px;
-  margin-left: 45%;
   font-family:'Segoe UI';
   font-style: bold;
   font-size:x-large;
   color: white;
   letter-spacing: 1.5px;
+  padding-left: 850px;
+}
+.content-outer{
+  display: flex;
+  justify-content: flex-end;
+  width:100%;
+}
+.results{
+  margin-right: 40px;
+}
+.contents{
+  display: flex;
+  line-height: 50px;
+ justify-content: flex-end;
+ font-weight:500;
+ font-family:'Segoe UI';
+  font-style: bold;
+  font-size:30px;
+  color:black;
 }

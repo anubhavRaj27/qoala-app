@@ -42,7 +42,7 @@ const MyDropzone = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('YOUR_BACKEND_API_ENDPOINT', formData, {
+      const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
