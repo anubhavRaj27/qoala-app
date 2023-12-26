@@ -21,7 +21,7 @@ const MainPage = () => {
       </div>
       <div className='contentMain'>
         <Typography variant="body1" sx={{ fontSize: '25px', fontFamily: 'Bitter' }}>
-          This is a Thai National ID Card Reader website where you can upload images of your card through the dropzone provided.After succesfully uploading the images u can see them in results.You can also delete them from the results page.Altough remember that the website provides a soft delete functionality and hence once deleted the data wont be shown but will be with us in our database 
+          This is a Thai National ID Card Reader website where you can upload images of your card through the dropzone provided.After succesfully uploading the images u can see them in results.You can also delete them from the results page.Altough remember that the website provides a soft delete functionality and hence once deleted the data wont be shown but will be with us in our database.
         </Typography>
       </div>
     </div>

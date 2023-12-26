@@ -9,7 +9,7 @@ const Results = () => {
 
   const fetchResults= async () => {
     try {
-      const response = await axios.get('https://6bbb-122-172-82-83.ngrok-free.app/list_data');
+      const response = await axios.get('https://fba8-122-172-82-83.ngrok-free.app/list_data');
       console.log(response.data);
       setResults(response.data);
     } catch (error) {
@@ -23,7 +23,7 @@ const Results = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://6bbb-122-172-82-83.ngrok-free.app/delete/data/${id}`);
+      await axios.delete(`https://fba8-122-172-82-83.ngrok-free.app/delete/data/${id}`);
       
       setResults(prevResults => prevResults.filter(result => result.id !== id));
       

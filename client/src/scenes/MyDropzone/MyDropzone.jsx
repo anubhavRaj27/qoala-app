@@ -49,7 +49,7 @@ const MyDropzone = () => {
 
     try {
       const response = await axios.post(
-        'https://6bbb-122-172-82-83.ngrok-free.app/upload',
+        'https://fba8-122-172-82-83.ngrok-free.app/upload',
         formData,
         {
           headers: {

@@ -10,7 +10,7 @@ import { CardActionArea } from '@mui/material';
 const DisplayCard=({result, onDelete})=>{
   const handleDelete = async () => {
     try {
-      const response = await axios.delete(`https://6bbb-122-172-82-83.ngrok-free.app/delete/data/${result.id}`);
+      const response = await axios.delete(`https://fba8-122-172-82-83.ngrok-free.app/delete/data/${result.id}`);
       console.log('Delete successful', response.data);
       onDelete(result.id);
     } catch (error) {
